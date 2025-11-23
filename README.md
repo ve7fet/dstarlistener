@@ -104,7 +104,7 @@ Exit from the PostgreSQL command line with `\q`.
 
 ## Configure `dstarlistener`
 
-We will use a `.env` file to hold most of the sensitive information (usernames and passwords).
+We will use a `.env` file to hold most of the sensitive information (usernames and passwords). You do **NOT** need to set the credentials in the actual `dstarlistener` script, put them in the `.env` file, the defaults in the `dstarlistener` script are used only if the corresponding keys are not found in the `.env` file (like `SMTP_PORT`, which would default to `465` if an alternate port isn't found in the `.env` file).
 
 Edit the `RENAME.env` file from this repo, and modify it with your necessary environment variables (there are a few more you can add, if desired, see `dstarlistener`).
 
