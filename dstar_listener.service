@@ -1,0 +1,15 @@
+[Unit]
+Description=PostgreSQL D-STAR Listener Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /dstar/scripts/dstarlistener
+Restart=on-failure
+StandardOutput=file:/var/log/dstarlistener/dstarlistener.log
+StandardError=file:/var/log/dstarlistener/dstarlistener.log
+User=postgres
+Group=postgres
+
+[Install]
+WantedBy=multi-user.target
